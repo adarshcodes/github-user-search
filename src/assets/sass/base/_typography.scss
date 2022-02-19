@@ -1,7 +1,27 @@
 body {
-	font-family: "Rubik", sans-serif;
+	font-family: "SpaceMono", sans-serif;
 }
 
-.para-font {
+.heading-primary {
+	font-size: 2.6rem;
+	line-height: 3.8rem;
+	font-weight: 700;
+}
+
+.heading-secondary {
+	font-size: 2.2rem;
+	line-height: 3.3rem;
+	font-weight: 700;
+}
+
+.heading-tertiary {
 	font-size: 1.6rem;
+	line-height: 2.4rem;
+	font-weight: 400;
+}
+
+.heading-quad {
+	font-size: 1.3rem;
+	line-height: 2rem;
+	font-weight: 400;
 }
