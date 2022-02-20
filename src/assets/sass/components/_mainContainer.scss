@@ -9,10 +9,13 @@
 	max-width: 73rem;
 }
 
+// Themes Mode
+
 .navbar {
 	@include flex-row;
 	justify-content: space-between;
 	align-items: center;
+	margin-bottom: 3.6rem;
 
 	&--theme-switcher {
 		@include flex-row;
@@ -27,6 +30,68 @@
 
 		&__theme-img {
 			width: 2rem;
+		}
+	}
+}
+
+// SearchBar
+
+.search-bar {
+	width: 100%;
+	background-color: $lm-white;
+	@include flex-row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.95rem 1rem 0.95rem 3.2rem;
+	@include radius-medium;
+
+	&--icon {
+		width: 2.4rem;
+	}
+
+	&--form {
+		position: relative;
+	}
+
+	&--input {
+		outline: none;
+		width: 55.8rem;
+		padding: 1rem 2.4rem;
+		font-size: 1.8rem;
+		font-weight: 400;
+		border: none;
+		caret-color: $lm-azure-radiance;
+		line-height: 2.5rem;
+		font-family: inherit;
+	}
+
+	&--input-error {
+		position: absolute;
+		top: 50%;
+		right: 0;
+		transform: translate(-2.4rem, -50%);
+		font-size: 1.5rem;
+		font-weight: 700;
+		color: $lm-error;
+	}
+
+	&--btn {
+		padding: 1.3rem 2.35rem;
+		background-color: $lm-azure-radiance;
+		@include radius-small;
+		font-size: 1.6rem;
+		font-weight: 700;
+		color: $dm-white;
+		transition: all 0.2s;
+		cursor: pointer;
+		user-select: none;
+
+		&:hover {
+			background-color: #60abff;
+		}
+
+		&:active {
+			transform: scale(0.95);
 		}
 	}
 }

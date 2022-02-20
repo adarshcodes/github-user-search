@@ -48,3 +48,11 @@
 	justify-content: center;
 	align-items: center;
 }
+
+@mixin radius-medium {
+	border-radius: 1.5rem;
+}
+
+@mixin radius-small {
+	border-radius: 1rem;
+}
