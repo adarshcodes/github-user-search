@@ -5,10 +5,14 @@ import "./assets/sass/main.css";
 function App() {
 	const [isDark, setIsDark] = React.useState(false);
 
+	const toggleTheme = () => {
+		setIsDark(!isDark);
+	};
+
 	return (
 		<div className="app">
 			<div className="main-container">
-				<Navigation isDark={isDark} />
+				<Navigation isDark={isDark} toggle={toggleTheme} />
 			</div>
 		</div>
 	);
