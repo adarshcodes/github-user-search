@@ -1,0 +1,32 @@
+.app {
+	width: 100%;
+	height: 100vh;
+	background-color: $lm-zircon;
+	padding: 14.4rem 35.5rem 17rem 35.5rem;
+}
+
+.main-container {
+	max-width: 73rem;
+}
+
+.navbar {
+	@include flex-row;
+	justify-content: space-between;
+	align-items: center;
+
+	&--theme-switcher {
+		@include flex-row;
+		align-items: center;
+
+		&__theme-text {
+			margin-right: 1.6rem;
+			font-weight: 700;
+			text-transform: uppercase;
+			color: $lm-lynch;
+		}
+
+		&__theme-img {
+			width: 2rem;
+		}
+	}
+}
