@@ -1,6 +1,8 @@
 import React from "react";
 import Navigation from "./components/Navigation";
 import SearchBar from "./components/SearchBar";
+import UserData from "./components/UserData";
+
 import "./assets/sass/main.css";
 
 function App() {
@@ -17,6 +19,7 @@ function App() {
 			<div className="main-container">
 				<Navigation isDark={isDark} toggle={toggleTheme} />
 				<SearchBar />
+				<UserData />
 			</div>
 		</div>
 	);
