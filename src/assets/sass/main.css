@@ -77,11 +77,26 @@ body {
   margin-right: 1.6rem;
   font-weight: 700;
   text-transform: uppercase;
-  color: #697c9a;
 }
 
 .navbar--theme-switcher i {
   font-size: 2rem;
+}
+
+.navbar--theme-switcher .make-it-light {
+  color: #90a4d4;
+}
+
+.navbar--theme-switcher .make-it-light i {
+  color: #222731;
+}
+
+.navbar--theme-switcher .make-it-dark {
+  color: #222731;
+}
+
+.navbar--theme-switcher .make-it-dark i {
+  color: #90a4d4;
 }
 
 .search-bar {

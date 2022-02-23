@@ -7,14 +7,14 @@ export default function Navigation(props) {
 		<nav className="navbar">
 			<h1 className="navbar--logo heading-primary">devfinder</h1>
 			<div className="navbar--theme-switcher" onClick={props.toggle}>
-				<h4 className="heading-quad navbar--theme-switcher__theme-text">
-					{props.isDark ? "Light" : "Dark"}
-				</h4>
-
 				{props.isDark ? (
-					<i class="fa-duotone fa-sun-bright"></i>
+					<h4 className="heading-quad navbar--theme-switcher__theme-text make-it-light">
+						Light <i class="fa-duotone fa-sun-bright"></i>
+					</h4>
 				) : (
-					<i class="fa-duotone fa-moon-stars"></i>
+					<h4 className="heading-quad navbar--theme-switcher__theme-text make-it-dark">
+						Dark <i class="fa-duotone fa-moon-stars"></i>
+					</h4>
 				)}
 			</div>
 		</nav>

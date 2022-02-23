@@ -26,11 +26,26 @@
 			margin-right: 1.6rem;
 			font-weight: 700;
 			text-transform: uppercase;
-			color: $lm-lynch;
 		}
 
 		i {
 			font-size: 2rem;
+		}
+
+		.make-it-light {
+			color: #90a4d4;
+
+			i {
+				color: #222731;
+			}
+		}
+
+		.make-it-dark {
+			color: #222731;
+
+			i {
+				color: #90a4d4;
+			}
 		}
 	}
 }
