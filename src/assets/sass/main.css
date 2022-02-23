@@ -19,6 +19,7 @@ body {
   font-size: 1.5rem;
   font-weight: 400;
   line-height: 2.5rem;
+  color: #4b6a9b;
 }
 
 .heading-primary {
@@ -69,6 +70,7 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
+  cursor: pointer;
 }
 
 .navbar--theme-switcher__theme-text {
@@ -78,8 +80,8 @@ body {
   color: #697c9a;
 }
 
-.navbar--theme-switcher__theme-img {
-  width: 2rem;
+.navbar--theme-switcher i {
+  font-size: 2rem;
 }
 
 .search-bar {
@@ -141,5 +143,96 @@ body {
 
 .search-bar--btn:active {
   transform: scale(0.95);
+}
+
+.card {
+  border-radius: 1.5rem;
+  background-color: #fefefe;
+  margin-top: 2.4rem;
+  padding: 4.8rem 4.8rem 2.9rem 4.8rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.card--pp {
+  width: 11.7rem;
+  height: 11.7rem;
+  margin-right: 3.7rem;
+  border: 0.1rem solid blue;
+  flex-shrink: 0;
+}
+
+.card--pp img {
+  width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.card--card-data .userdata {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.card--card-data .userdata__username {
+  font-weight: 400;
+  color: #0079ff;
+  text-transform: lowercase;
+}
+
+.card--card-data .userdata__date {
+  color: #697c9a;
+}
+
+.card--card-data__bio {
+  margin-bottom: 3.2rem;
+}
+
+.card--card-data__repo-card {
+  background-color: #f6f8ff;
+  border-radius: 1rem;
+  padding: 1.6rem 8.3rem 1.6rem 3.2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 3.7rem;
+}
+
+.card--card-data__repo-card h2 {
+  color: #2b3442;
+}
+
+.card--card-data__social {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.card--card-data__social .socialicon {
+  color: #4b6a9b;
+  width: 50%;
+  margin-bottom: 1.9rem;
+}
+
+.card--card-data__social .socialicon i {
+  margin-right: 1.6rem;
+  font-size: 2rem;
+  color: black;
+}
+
+.card--card-data__social .socialicon a {
+  text-decoration: none;
+  color: #4b6a9b;
+  transition: all 0.2s;
+}
+
+.card--card-data__social .socialicon a:hover {
+  text-decoration: underline;
 }
 /*# sourceMappingURL=main.css.map */
