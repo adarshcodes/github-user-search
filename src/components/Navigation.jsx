@@ -12,9 +12,9 @@ export default function Navigation(props) {
 				</h4>
 
 				{props.isDark ? (
-					<i class="fa-solid fa-sun-bright"></i>
+					<i class="fa-duotone fa-sun-bright"></i>
 				) : (
-					<i class="fa-solid fa-moon-stars"></i>
+					<i class="fa-duotone fa-moon-stars"></i>
 				)}
 			</div>
 		</nav>
