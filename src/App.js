@@ -12,6 +12,14 @@ function App() {
 	const toggleTheme = () => {
 		setIsDark(!isDark);
 	};
+
+	React.useEffect(() => {
+		const prefersDark = window.matchMedia(
+			"(prefers-color-scheme: dark)"
+		).matches;
+
+		prefersDark ? setIsDark(true) : setIsDark(false);
+	}, []);
 	// End of switching dark-mode
 
 	return (
