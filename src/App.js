@@ -52,7 +52,7 @@ function App() {
 					avatar={userdata.avatar_url}
 					name={userdata.name}
 					username={userdata.login}
-					createdAt={userdata.createdAt}
+					createdAt={userdata.created_at}
 					bio={userdata.bio}
 					repos={userdata.repos_url}
 					followers={userdata.followers}
