@@ -1,10 +1,8 @@
 import React from "react";
 
 export default function UserData(props) {
-	let format = (d) =>
-		d.toString().replace(/\w+ (\w+) (\d+) (\d+).*/, "$2-$1-$3");
-
-	let joinedDate = format(Date(props.createdAt));
+	const date = new Date(props.createdAt);
+	const joinedDate = date.toString().slice(4, 15);
 
 	return (
 		<div className="card">
@@ -21,7 +19,7 @@ export default function UserData(props) {
 				</div>
 
 				<div className="card--card-data__bio">
-					{props.bio === null
+					{props.bio === null || ""
 						? `Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio.
 					Quisque volutpat mattis eros. nulled`
 						: props.bio}
@@ -51,26 +49,26 @@ export default function UserData(props) {
 				<div className="card--card-data__social">
 					<div className="socialicon">
 						<i class="fa-solid fa-location-dot"></i>
-						{props.location === null ? "Not available" : props.location}
+						{props.location === null || "" ? "Not available" : props.location}
 					</div>
 
 					<div className="socialicon">
 						<i class="fa-brands fa-twitter"></i>
 						<a href="not yet">
-							{props.twitter === null ? "Not available" : props.twitter}
+							{props.twitter === null || "" ? "Not available" : props.twitter}
 						</a>
 					</div>
 
 					<div className="socialicon">
 						<i class="fa-solid fa-link"></i>
 						<a href="https://github.blog">
-							{props.blog === null ? "Not available" : props.blog}
+							{props.blog === null || "" ? "Not available" : props.blog}
 						</a>
 					</div>
 
 					<div className="socialicon">
 						<i class="fa-solid fa-building"></i>
-						{props.work === null ? "Not available" : props.work}
+						{props.work === null || "" ? "Not available" : props.work}
 					</div>
 				</div>
 			</div>

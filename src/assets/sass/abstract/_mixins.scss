@@ -56,3 +56,7 @@
 @mixin radius-small {
 	border-radius: 1rem;
 }
+
+@mixin shadow {
+	box-shadow: rgba($lm-zircon, 1) 0px 8px 24px;
+}

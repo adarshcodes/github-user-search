@@ -53,6 +53,7 @@
 // SearchBar
 
 .search-bar {
+	@include shadow;
 	width: 100%;
 	background-color: $lm-white;
 	@include flex-row;
@@ -115,6 +116,7 @@
 // Styles for Profile card
 
 .card {
+	@include shadow;
 	@include radius-medium;
 	background-color: $lm-white;
 	margin-top: 2.4rem;

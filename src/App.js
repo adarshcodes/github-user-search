@@ -24,23 +24,20 @@ function App() {
 
 	// Fetching data from GitHub API
 
-	const [userdata, setUserdata] = React.useState();
-	const token = "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";
+	const [userdata, setUserdata] = React.useState([]);
 
 	React.useEffect(() => {
 		function getUser(username) {
-			fetch(`https://api.github.com/users/${username}`, {
-				headers: {
-					Authorization: `token ${token}`,
-				},
-			})
+			fetch(`https://api.github.com/users/${username}`)
 				.then((res) => res.json())
 				.then((data) => setUserdata(data));
 		}
+
 		getUser("octocat");
 	}, []);
 
 	console.log(userdata);
+
 	// End of fetching data
 
 	return (
@@ -54,7 +51,7 @@ function App() {
 					username={userdata.login}
 					createdAt={userdata.created_at}
 					bio={userdata.bio}
-					repos={userdata.repos_url}
+					repos={userdata.public_repos}
 					followers={userdata.followers}
 					following={userdata.following}
 					location={userdata.location}
