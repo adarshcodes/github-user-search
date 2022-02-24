@@ -200,6 +200,7 @@ body {
 
 .card--card-data .userdata__date {
   color: #697c9a;
+  margin-top: 0.7rem;
 }
 
 .card--card-data__bio {

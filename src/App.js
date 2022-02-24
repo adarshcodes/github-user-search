@@ -25,14 +25,24 @@ function App() {
 	// Fetching data from GitHub API
 
 	const [userdata, setUserdata] = React.useState([]);
+	const [error, setError] = React.useState(null);
+
+	function getUser(username) {
+		fetch(`https://api.github.com/users/${username}`)
+			.then((res) => {
+				if (!res.ok) {
+					throw Error("No User");
+				}
+				return res.json();
+			})
+			.then((data) => {
+				setUserdata(data);
+				setError(null);
+			})
+			.catch((error) => setError(error.message));
+	}
 
 	React.useEffect(() => {
-		function getUser(username) {
-			fetch(`https://api.github.com/users/${username}`)
-				.then((res) => res.json())
-				.then((data) => setUserdata(data));
-		}
-
 		getUser("octocat");
 	}, []);
 
@@ -49,11 +59,17 @@ function App() {
 		});
 	}
 
+	//  handle search
+
+	function search() {
+		getUser(user);
+	}
+
 	return (
 		<div className="app">
 			<div className="main-container">
 				<Navigation isDark={isDark} toggle={toggleTheme} />
-				<SearchBar handleChange={setUsername} />
+				<SearchBar handleChange={setUsername} search={search} error={error} />
 				<UserData
 					avatar={userdata.avatar_url}
 					name={userdata.name}
