@@ -40,11 +40,20 @@ function App() {
 
 	// End of fetching data
 
+	// getting user input
+	const [user, setUser] = React.useState("");
+
+	function setUsername(event) {
+		setUser((prevUser) => {
+			return (prevUser = event.target.value);
+		});
+	}
+
 	return (
 		<div className="app">
 			<div className="main-container">
 				<Navigation isDark={isDark} toggle={toggleTheme} />
-				<SearchBar />
+				<SearchBar handleChange={setUsername} />
 				<UserData
 					avatar={userdata.avatar_url}
 					name={userdata.name}
