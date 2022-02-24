@@ -1,6 +1,7 @@
 import React from "react";
 
 export default function UserData(props) {
+	// Converting date to readable format
 	const date = new Date(props.createdAt);
 	const joinedDate = date.toString().slice(4, 15);
 
@@ -47,28 +48,82 @@ export default function UserData(props) {
 				</div>
 
 				<div className="card--card-data__social">
-					<div className="socialicon">
-						<i class="fa-solid fa-location-dot"></i>
-						{props.location === null || "" ? "Not available" : props.location}
+					<div
+						className="socialicon"
+						style={
+							props.location === null
+								? { color: "#AFBDD2" }
+								: { color: "#4b6a9b" }
+						}
+					>
+						<i
+							class="fa-solid fa-location-dot"
+							style={
+								props.location === null
+									? { color: "#AFBDD2" }
+									: { color: "#4b6a9b" }
+							}
+						></i>
+						{props.location === null ? "Not available" : props.location}
 					</div>
 
 					<div className="socialicon">
-						<i class="fa-brands fa-twitter"></i>
-						<a href="not yet">
-							{props.twitter === null || "" ? "Not available" : props.twitter}
+						<i
+							class="fa-brands fa-twitter"
+							style={
+								props.twitter === null
+									? { color: "#AFBDD2" }
+									: { color: "#4b6a9b" }
+							}
+						></i>
+						<a
+							href="not yet"
+							style={
+								props.twitter === null
+									? { color: "#AFBDD2" }
+									: { color: "#4b6a9b" }
+							}
+						>
+							{props.twitter === null ? "Not available" : props.twitter}
 						</a>
 					</div>
 
 					<div className="socialicon">
-						<i class="fa-solid fa-link"></i>
-						<a href="https://github.blog">
-							{props.blog === null || "" ? "Not available" : props.blog}
+						<i
+							class="fa-solid fa-link"
+							style={
+								props.blog === null || " "
+									? { color: "#AFBDD2" }
+									: { color: "#4b6a9b" }
+							}
+						></i>
+						<a
+							href={props.blog}
+							style={
+								props.blog === null || " "
+									? { color: "#AFBDD2" }
+									: { color: "#4b6a9b" }
+							}
+						>
+							{props.blog === null || " " ? "Not available" : props.blog}
 						</a>
 					</div>
 
-					<div className="socialicon">
-						<i class="fa-solid fa-building"></i>
-						{props.work === null || "" ? "Not available" : props.work}
+					<div
+						className="socialicon"
+						style={
+							props.work === null ? { color: "#AFBDD2" } : { color: "#4b6a9b" }
+						}
+					>
+						<i
+							class="fa-solid fa-building"
+							style={
+								props.work === null
+									? { color: "#AFBDD2" }
+									: { color: "#4b6a9b" }
+							}
+						></i>
+						{props.work === null ? "Not available" : props.work}
 					</div>
 				</div>
 			</div>

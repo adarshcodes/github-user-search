@@ -232,7 +232,7 @@ body {
 
 .card--card-data__social .socialicon {
   color: #4b6a9b;
-  width: 50%;
+  min-width: 50%;
   margin-bottom: 1.9rem;
 }
 
