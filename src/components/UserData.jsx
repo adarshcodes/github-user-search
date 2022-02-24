@@ -92,20 +92,16 @@ export default function UserData(props) {
 						<i
 							class="fa-solid fa-link"
 							style={
-								props.blog === null || " "
-									? { color: "#AFBDD2" }
-									: { color: "#4b6a9b" }
+								props.blog === "" ? { color: "#AFBDD2" } : { color: "#4b6a9b" }
 							}
 						></i>
 						<a
 							href={props.blog}
 							style={
-								props.blog === null || " "
-									? { color: "#AFBDD2" }
-									: { color: "#4b6a9b" }
+								props.blog === "" ? { color: "#AFBDD2" } : { color: "#4b6a9b" }
 							}
 						>
-							{props.blog === null || " " ? "Not available" : props.blog}
+							{props.blog === "" ? "Not available" : props.blog}
 						</a>
 					</div>
 
