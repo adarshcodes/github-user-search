@@ -12,11 +12,16 @@ export default function UserData(props) {
 			</div>
 			<div className="card--card-data">
 				<div className="userdata">
-					<div className="userdata__name">
-						<h1 className="userdata__user heading-primary">{props.name}</h1>
-						<h3 className="userdata__username">{props.username}</h3>
+					<div className="card--pp pp-tablet">
+						<img src={props.avatar} alt="pp" />
 					</div>
-					<p className="userdata__date">Joined {joinedDate}</p>
+					<div className="user-basic">
+						<div className="userdata__name">
+							<h1 className="userdata__user heading-primary">{props.name}</h1>
+							<h3 className="userdata__username">{props.username}</h3>
+						</div>
+						<p className="userdata__date">Joined {joinedDate}</p>
+					</div>
 				</div>
 
 				<div className="card--card-data__bio">
