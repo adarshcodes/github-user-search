@@ -50,7 +50,7 @@ function App() {
 	}
 
 	React.useEffect(() => {
-		return userdata && getUser("octocat");
+		getUser("octocat");
 	}, []);
 
 	// End of fetching data
