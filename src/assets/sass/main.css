@@ -299,7 +299,6 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 2rem;
 }
 
 @media screen and (max-width: 950px) {
