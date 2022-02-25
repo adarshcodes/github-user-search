@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import React from "react";
 import Navigation from "./components/Navigation";
 import SearchBar from "./components/SearchBar";
@@ -51,7 +50,7 @@ function App() {
 	}
 
 	React.useEffect(() => {
-		return !userdata ? getUser("octocat") : null;
+		return userdata && getUser("octocat");
 	}, []);
 
 	// End of fetching data
