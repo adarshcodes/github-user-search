@@ -39,10 +39,7 @@ export default function UserData(props) {
 				</div>
 
 				<div className="card--card-data__bio">
-					{props.bio === null || ""
-						? `Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio.
-					Quisque volutpat mattis eros. nulled`
-						: props.bio}
+					{props.bio === null || "" ? `This profile has no bio` : props.bio}
 				</div>
 
 				<div
