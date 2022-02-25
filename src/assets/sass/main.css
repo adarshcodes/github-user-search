@@ -275,6 +275,7 @@ body {
   justify-content: space-between;
   align-items: flex-start;
   margin-bottom: 2rem;
+  width: 100%;
 }
 
 @media screen and (max-width: 950px) {

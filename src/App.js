@@ -24,7 +24,14 @@ function App() {
 
 	// Fetching data from GitHub API
 
-	const [userdata, setUserdata] = React.useState([]);
+	const [userdata, setUserdata] = React.useState(
+		JSON.parse(localStorage.getItem("userdata")) || []
+	);
+
+	React.useEffect(() => {
+		localStorage.setItem("userdata", JSON.stringify(userdata));
+	}, [userdata]);
+
 	const [error, setError] = React.useState(null);
 
 	function getUser(username) {
@@ -43,10 +50,8 @@ function App() {
 	}
 
 	React.useEffect(() => {
-		getUser("octocat");
+		return !userdata ? getUser("octocat") : null;
 	}, []);
-
-	console.log(userdata);
 
 	// End of fetching data
 
