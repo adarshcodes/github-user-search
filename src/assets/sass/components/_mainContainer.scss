@@ -297,6 +297,8 @@
 				color: $lm-kashmir-blue;
 				min-width: 50%;
 				margin-bottom: 1.9rem;
+				@include flex-row;
+				align-items: center;
 
 				@media screen and (max-width: 500px) {
 					font-size: 1.3rem;
