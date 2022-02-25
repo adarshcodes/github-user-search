@@ -13,6 +13,7 @@ export default function SearchBar(props) {
 					onChange={props.handleChange}
 					value={props.username}
 					autoComplete="off"
+					placeholder="Search GitHub username…"
 				/>
 				{props.error && <p className="search-bar--input-error">No results</p>}
 			</div>
