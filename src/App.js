@@ -71,7 +71,7 @@ function App() {
 	}
 
 	return (
-		<div className={isDark ? "app app-dark" : "app"}>
+		<div className={isDark ? "app app-dark" : "app"} id="app">
 			<div className="main-container">
 				<Navigation isDark={isDark} toggle={toggleTheme} />
 				<SearchBar

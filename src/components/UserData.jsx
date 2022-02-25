@@ -26,7 +26,7 @@ export default function UserData(props) {
 							>
 								{props.name}
 							</h1>
-							<h3 className="userdata__username">{props.username}</h3>
+							<h2 className="userdata__username">{props.username}</h2>
 						</div>
 						<p
 							className={
@@ -121,7 +121,7 @@ export default function UserData(props) {
 							}
 						></i>
 						<a
-							href="not yet"
+							href="#app"
 							style={
 								props.twitter === null
 									? { color: "#AFBDD2" }
