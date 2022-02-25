@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React from "react";
 import Navigation from "./components/Navigation";
 import SearchBar from "./components/SearchBar";

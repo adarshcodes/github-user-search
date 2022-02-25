@@ -12,6 +12,7 @@ html {
 
 body {
   box-sizing: border-box;
+  transition: background-color 300ms ease-in-out;
 }
 
 body {
@@ -48,10 +49,12 @@ body {
 }
 
 .app {
+  position: relative;
   width: 100%;
   height: 100%;
   background-color: #f6f8ff;
   padding: 14.5rem 35.5rem 14.5rem 35.5rem;
+  mix-blend-mode: difference;
 }
 
 @media screen and (max-width: 1300px) {
@@ -130,7 +133,7 @@ body {
 }
 
 .search-bar {
-  box-shadow: #f6f8ff 0px 8px 24px;
+  box-shadow: 0 1em 30px -10px rgba(70, 96, 187, 0.02);
   width: 100%;
   background-color: #fefefe;
   display: flex;
@@ -218,7 +221,7 @@ body {
 }
 
 .card {
-  box-shadow: #f6f8ff 0px 8px 24px;
+  box-shadow: 0 1em 30px -10px rgba(70, 96, 187, 0.02);
   border-radius: 1.5rem;
   background-color: #fefefe;
   margin-top: 2.4rem;

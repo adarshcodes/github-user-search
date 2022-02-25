@@ -1,8 +1,10 @@
 .app {
+	position: relative;
 	width: 100%;
 	height: 100%;
 	background-color: $lm-zircon;
 	padding: 14.5rem 35.5rem 14.5rem 35.5rem;
+	mix-blend-mode: difference;
 
 	@media screen and (max-width: 1300px) {
 		padding: 14.5rem 25rem;
