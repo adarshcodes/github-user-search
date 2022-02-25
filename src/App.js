@@ -72,12 +72,18 @@ function App() {
 	}
 
 	return (
-		<div className="app">
+		<div className={isDark ? "app app-dark" : "app"}>
 			<div className="main-container">
 				<Navigation isDark={isDark} toggle={toggleTheme} />
-				<SearchBar handleChange={setUsername} search={search} error={error} />
+				<SearchBar
+					isDark={isDark}
+					handleChange={setUsername}
+					search={search}
+					error={error}
+				/>
 
 				<UserData
+					isDark={isDark}
 					avatar={userdata.avatar_url}
 					name={userdata.name}
 					username={userdata.login}

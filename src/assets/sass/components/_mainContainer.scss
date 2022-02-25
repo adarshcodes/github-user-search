@@ -4,7 +4,7 @@
 	height: 100%;
 	background-color: $lm-zircon;
 	padding: 14.5rem 35.5rem 14.5rem 35.5rem;
-	mix-blend-mode: difference;
+	transition: background-color 300ms ease-in-out;
 
 	@media screen and (max-width: 1300px) {
 		padding: 14.5rem 25rem;
@@ -34,6 +34,10 @@
 // Themes Mode
 
 .navbar {
+	&__logo {
+		transition: color 600ms ease-in-out;
+	}
+
 	@include flex-row;
 	justify-content: space-between;
 	align-items: center;
@@ -58,7 +62,7 @@
 			color: #90a4d4;
 
 			i {
-				color: #222731;
+				color: #90a4d4;
 			}
 		}
 
@@ -83,6 +87,7 @@
 	align-items: center;
 	padding: 0.95rem 1rem 0.95rem 3.2rem;
 	@include radius-medium;
+	transition: color 600ms ease-in-out;
 
 	&--icon {
 		width: 2.4rem;
@@ -107,6 +112,7 @@
 		caret-color: $lm-azure-radiance;
 		line-height: 2.5rem;
 		font-family: inherit;
+		transition: color 600ms ease-in-out;
 
 		@media screen and (max-width: 500px) {
 			font-size: 1.3rem;
@@ -161,6 +167,7 @@
 	background-color: $lm-white;
 	margin-top: 2.4rem;
 	padding: 4.8rem 4.8rem 2.9rem 4.8rem;
+	transition: color 600ms ease-in-out;
 
 	@include flex-row;
 
@@ -325,4 +332,33 @@
 			}
 		}
 	}
+}
+
+// Dark Mode
+
+.app-dark {
+	background-color: $dm-big-stone !important;
+	color: #fff !important;
+}
+
+.logo-dark {
+	color: #fff !important;
+}
+
+.card-dark {
+	background-color: $dm-cloud-burst !important;
+	color: #fff !important;
+}
+
+.input-dark {
+	background-color: $dm-cloud-burst !important;
+	color: #fff !important;
+
+	&::placeholder {
+		color: rgb(165, 165, 165);
+	}
+}
+
+.darkmode-text {
+	color: #fff !important;
 }

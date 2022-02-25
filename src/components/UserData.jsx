@@ -6,7 +6,7 @@ export default function UserData(props) {
 	const joinedDate = date.toString().slice(4, 15);
 
 	return (
-		<div className="card">
+		<div className={props.isDark ? "card-dark card" : "card"}>
 			<div className="card--pp">
 				<img src={props.avatar} alt="pp" />
 			</div>
@@ -17,10 +17,24 @@ export default function UserData(props) {
 					</div>
 					<div className="user-basic">
 						<div className="userdata__name">
-							<h1 className="userdata__user heading-primary">{props.name}</h1>
+							<h1
+								className={
+									props.isDark
+										? "darkmode-text userdata__user heading-primary"
+										: "userdata__user heading-primary"
+								}
+							>
+								{props.name}
+							</h1>
 							<h3 className="userdata__username">{props.username}</h3>
 						</div>
-						<p className="userdata__date">Joined {joinedDate}</p>
+						<p
+							className={
+								props.isDark ? "darkmode-text userdata__date" : "userdata__date"
+							}
+						>
+							Joined {joinedDate}
+						</p>
 					</div>
 				</div>
 
@@ -31,22 +45,48 @@ export default function UserData(props) {
 						: props.bio}
 				</div>
 
-				<div className="card--card-data__repo-card">
+				<div
+					className={
+						props.isDark
+							? "app-dark card--card-data__repo-card"
+							: "card--card-data__repo-card"
+					}
+				>
 					<div className="repo">
 						<p className="text">Repos</p>
-						<h2 className="heading-secondary repo-numbers">{props.repos}</h2>
+						<h2
+							className={
+								props.isDark
+									? "darkmode-text heading-secondary repo-numbers"
+									: "heading-secondary repo-numbers"
+							}
+						>
+							{props.repos}
+						</h2>
 					</div>
 
 					<div className="followers">
 						<p className="text">Followers</p>
-						<h2 className="heading-secondary repo-numbers">
+						<h2
+							className={
+								props.isDark
+									? "darkmode-text heading-secondary repo-numbers"
+									: "heading-secondary repo-numbers"
+							}
+						>
 							{props.followers}
 						</h2>
 					</div>
 
 					<div className="following">
 						<p className="text">Following</p>
-						<h2 className="heading-secondary repo-numbers">
+						<h2
+							className={
+								props.isDark
+									? "darkmode-text heading-secondary repo-numbers"
+									: "heading-secondary repo-numbers"
+							}
+						>
 							{props.following}
 						</h2>
 					</div>
@@ -54,7 +94,7 @@ export default function UserData(props) {
 
 				<div className="card--card-data__social">
 					<div
-						className="socialicon"
+						className={props.isDark ? "darkmode-text socialicon" : "socialicon"}
 						style={
 							props.location === null
 								? { color: "#AFBDD2" }
@@ -72,7 +112,9 @@ export default function UserData(props) {
 						{props.location === null ? "Not available" : props.location}
 					</div>
 
-					<div className="socialicon">
+					<div
+						className={props.isDark ? "darkmode-text socialicon" : "socialicon"}
+					>
 						<i
 							class="fa-brands fa-twitter"
 							style={
@@ -88,12 +130,15 @@ export default function UserData(props) {
 									? { color: "#AFBDD2" }
 									: { color: "#4b6a9b" }
 							}
+							className={props.isDark ? "darkmode-text" : ""}
 						>
 							{props.twitter === null ? "Not available" : props.twitter}
 						</a>
 					</div>
 
-					<div className="socialicon">
+					<div
+						className={props.isDark ? "darkmode-text socialicon" : "socialicon"}
+					>
 						<i
 							class="fa-solid fa-link"
 							style={
@@ -105,13 +150,14 @@ export default function UserData(props) {
 							style={
 								props.blog === "" ? { color: "#AFBDD2" } : { color: "#4b6a9b" }
 							}
+							className={props.isDark ? "darkmode-text" : ""}
 						>
 							{props.blog === "" ? "Not available" : props.blog}
 						</a>
 					</div>
 
 					<div
-						className="socialicon"
+						className={props.isDark ? "darkmode-text socialicon" : "socialicon"}
 						style={
 							props.work === null ? { color: "#AFBDD2" } : { color: "#4b6a9b" }
 						}

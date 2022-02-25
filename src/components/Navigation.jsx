@@ -5,7 +5,15 @@ import React from "react";
 export default function Navigation(props) {
 	return (
 		<nav className="navbar">
-			<h1 className="navbar--logo heading-primary">devfinder</h1>
+			<h1
+				className={
+					props.isDark
+						? "logo-dark heading-primary navbar__logo"
+						: "heading-primary navbar__logo"
+				}
+			>
+				devfinder
+			</h1>
 			<div className="navbar--theme-switcher" onClick={props.toggle}>
 				{props.isDark ? (
 					<h4 className="heading-quad navbar--theme-switcher__theme-text make-it-light">
