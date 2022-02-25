@@ -70,20 +70,35 @@ function App() {
 			<div className="main-container">
 				<Navigation isDark={isDark} toggle={toggleTheme} />
 				<SearchBar handleChange={setUsername} search={search} error={error} />
-				<UserData
-					avatar={userdata.avatar_url}
-					name={userdata.name}
-					username={userdata.login}
-					createdAt={userdata.created_at}
-					bio={userdata.bio}
-					repos={userdata.public_repos}
-					followers={userdata.followers}
-					following={userdata.following}
-					location={userdata.location}
-					twitter={userdata.twitter_username}
-					blog={userdata.blog}
-					work={userdata.company}
-				/>
+				{error ? (
+					<div
+						className="card"
+						style={{
+							padding: "15%",
+							justifyContent: "center",
+							textAlign: "center",
+							lineHeight: "5rem",
+						}}
+					>
+						⚠️ Problem in connecting to the server. <br /> Check your internet
+						connection!
+					</div>
+				) : (
+					<UserData
+						avatar={userdata.avatar_url}
+						name={userdata.name}
+						username={userdata.login}
+						createdAt={userdata.created_at}
+						bio={userdata.bio}
+						repos={userdata.public_repos}
+						followers={userdata.followers}
+						following={userdata.following}
+						location={userdata.location}
+						twitter={userdata.twitter_username}
+						blog={userdata.blog}
+						work={userdata.company}
+					/>
+				)}
 			</div>
 		</div>
 	);
